@@ -2,9 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TradingEngineServer.core.TradingEngineConfiguration
+namespace TradingEngineServer.Core.Configuration
 {
-    internal class TradingEngineServerConfiguration
+     class TradingEngineServerConfiguration
     {
+
+    }
+
+    class TradingEngineServerSettings
+    {
+        public int Port { get; set; }
     }
 }
+
