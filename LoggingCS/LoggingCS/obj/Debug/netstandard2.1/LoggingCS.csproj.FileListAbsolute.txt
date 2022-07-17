@@ -1,0 +1,5 @@
+C:\Users\Brian Franco\Desktop\Trading Engine\FCM-Trading-Engine-Server\LoggingCS\LoggingCS\obj\Debug\netstandard2.1\LoggingCS.csproj.AssemblyReference.cache
+C:\Users\Brian Franco\Desktop\Trading Engine\FCM-Trading-Engine-Server\LoggingCS\LoggingCS\obj\Debug\netstandard2.1\LoggingCS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Brian Franco\Desktop\Trading Engine\FCM-Trading-Engine-Server\LoggingCS\LoggingCS\obj\Debug\netstandard2.1\LoggingCS.AssemblyInfoInputs.cache
+C:\Users\Brian Franco\Desktop\Trading Engine\FCM-Trading-Engine-Server\LoggingCS\LoggingCS\obj\Debug\netstandard2.1\LoggingCS.AssemblyInfo.cs
+C:\Users\Brian Franco\Desktop\Trading Engine\FCM-Trading-Engine-Server\LoggingCS\LoggingCS\obj\Debug\netstandard2.1\LoggingCS.csproj.CoreCompileInputs.cache

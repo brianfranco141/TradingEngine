@@ -511,6 +511,19 @@
         "runtime": {
           "lib/netcoreapp3.0/System.Text.Json.dll": {}
         }
+      },
+      "TradingEngineServer.Logging/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Microsoft.Extensions.Options": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TradingEngineServer.Logging.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TradingEngineServer.Logging.dll": {}
+        }
       }
     }
   },
@@ -1417,6 +1430,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "TradingEngineServer.Logging/1.0.0": {
+      "type": "project",
+      "path": "LoggingCS/LoggingCS/LoggingCS.csproj",
+      "msbuildProject": "LoggingCS/LoggingCS/LoggingCS.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1424,7 +1442,8 @@
       "Microsoft.Extensions.Hosting >= 5.0.0",
       "Microsoft.Extensions.Hosting.Abstractions >= 6.0.0",
       "Microsoft.Extensions.Logging.Abstractions >= 5.0.0",
-      "System.Runtime >= 4.3.1"
+      "System.Runtime >= 4.3.1",
+      "TradingEngineServer.Logging >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1435,7 +1454,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\Brian Franco\\Desktop\\Trading Engine\\FCM-Trading-Engine-Server\\TradingEngineServer.csproj",
-      "projectName": "TradingEngineServer.core",
+      "projectName": "TradingEngineServer.Core",
       "projectPath": "C:\\Users\\Brian Franco\\Desktop\\Trading Engine\\FCM-Trading-Engine-Server\\TradingEngineServer.csproj",
       "packagesPath": "C:\\Users\\Brian Franco\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Brian Franco\\Desktop\\Trading Engine\\FCM-Trading-Engine-Server\\obj\\",
@@ -1458,7 +1477,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Brian Franco\\Desktop\\Trading Engine\\FCM-Trading-Engine-Server\\LoggingCS\\LoggingCS\\LoggingCS.csproj": {
+              "projectPath": "C:\\Users\\Brian Franco\\Desktop\\Trading Engine\\FCM-Trading-Engine-Server\\LoggingCS\\LoggingCS\\LoggingCS.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

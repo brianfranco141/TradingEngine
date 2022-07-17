@@ -5,7 +5,7 @@ using Microsoft.Extensions.Hosting;
 
 using TradingEngineServer.Core;
 
-using var engine = TradingEngineServerHostBuilder.BuildTradingEngineServer();
+using var engine = TradingEngineHostBuilder.BuildTradingEngineServer();
 TradingEngineServerServiceProvider.ServiceProvider = engine.Services;
 {
     using var scope = TradingEngineServerServiceProvider.ServiceProvider.CreateScope();

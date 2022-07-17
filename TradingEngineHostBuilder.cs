@@ -6,20 +6,23 @@ using System.Collections.Generic;
 using System.Text;
 
 using TradingEngineServer.Core.Configuration;
+using TradingEngineServer.Logging;
 
 namespace TradingEngineServer.Core
 {
-    public sealed class TradingEngineServerHostBuilder
+    public sealed class TradingEngineHostBuilder
     {
         public static IHost BuildTradingEngineServer()
-            => Host.CreateDefaultBuilder().ConfigureServices((context, services) =>
-            {
+            => Host.CreateDefaultBuilder().ConfigureServices((hostcontext, services)
+                =>
+                 {
                 //start with configuration
                 services.AddOptions();
-                services.Configure<TradingEngineServerConfiguration>(context.Configuration.GetSection(nameof(TradingEngineServerConfiguration)));
+                services.Configure<TradingEngineServerConfiguration>(hostcontext.Configuration.GetSection(nameof(TradingEngineServerConfiguration)));
 
                 //add singleton objects
-                services.AddSingleton<ITradingEngineServer, TradingEngineServer>();
+                services.AddSingleton<ITradingEngine, TradingEngineServer>();
+                services.AddSingleton<ITextLogger, TextLogger>();
 
                 //add hosted service
                 services.AddHostedService<TradingEngineServer>();

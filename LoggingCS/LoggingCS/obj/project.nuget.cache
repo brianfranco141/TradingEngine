@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "yRavs3nKzTW0TCEcxFfgA/3Iz4JSGaAIKswmPRu19W9BzqyxNIHt/p5KVzL8dFSow8sU8OmsO2rVZoL8z45TNw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Brian Franco\\Desktop\\Trading Engine\\FCM-Trading-Engine-Server\\LoggingCS\\LoggingCS\\LoggingCS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Brian Franco\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Brian Franco\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\Brian Franco\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\Brian Franco\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\Brian Franco\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Brian Franco\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\Brian Franco\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

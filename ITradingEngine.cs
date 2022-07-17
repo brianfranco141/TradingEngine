@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TradingEngineServer.Core
 {
-    internal interface ITradingEngineServer
+    internal interface ITradingEngine
     {
         Task Run(CancellationToken token);
     }

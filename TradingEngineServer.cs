@@ -2,25 +2,28 @@
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
+using System.Collections.Generic;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
 using TradingEngineServer.Core.Configuration;
+using TradingEngineServer.Logging;
 
 namespace TradingEngineServer.Core
 {
-    sealed class TradingEngineServer : BackgroundService, ITradingEngineServer
+    class TradingEngineServer : BackgroundService, ITradingEngine
     {
-        private readonly ILogger<TradingEngineServer> _logger;
-        private readonly TradingEngineServerConfiguration _tradingEngineServerConfiguration;
-        public TradingEngineServer(ILogger<TradingEngineServer> logger, 
-            IOptions<TradingEngineServerConfiguration> config)
+        private readonly IOptions<TradingEngineServerConfiguration> _engineConfiguration;
+        private readonly ITextLogger _logger;
+        public TradingEngineServer(IOptions<TradingEngineServerConfiguration> engineConfiguration, 
+            ITextLogger textLogger)
         {
-            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-            _tradingEngineServerConfiguration = config.Value ?? throw new ArgumentNullException(nameof(config));
+            _engineConfiguration = engineConfiguration ?? throw new ArgumentNullException(nameof(engineConfiguration));
+            _logger = textLogger ?? throw new ArgumentNullException(nameof(textLogger));
         }
 
-        public Task Run(CancellationToken token) => ExecuteAsync(token);
+        public Task RunAsync(CancellationToken token) => ExecuteAsync(token);
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
         {
             _logger.LogInformation($"Started {nameof(TradingEngineServer)}");
@@ -30,6 +33,11 @@ namespace TradingEngineServer.Core
             }
             _logger.LogInformation($"Stopped {nameof(TradingEngineServer)}");
             return Task.CompletedTask;
+        }
+
+        Task ITradingEngine.Run(CancellationToken token)
+        {
+            throw new NotImplementedException();
         }
     }
 }
